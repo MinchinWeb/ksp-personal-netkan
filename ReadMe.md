@@ -36,3 +36,6 @@ from [here](https://github.com/KSP-CKAN/CKAN/wiki/Adding-a-mod-to-the-CKAN)).
 Assumes that the metadata has been installed into the same root folder as this
 repo.
 
+### GitHub Access Token
+
+from here --> <https://github.com/settings/tokens>
