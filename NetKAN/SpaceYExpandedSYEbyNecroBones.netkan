@@ -9,6 +9,6 @@ tags:
 depends:
   - name: ModuleManager
 install:
-  - find: SpaceY-Expanded
-    install_to: GameData
+  - find: SpaceYExpanded
+    install_to: GameData/SpaceY
 x_via: Automated SpaceDock CKAN submission

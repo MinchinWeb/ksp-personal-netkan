@@ -9,11 +9,11 @@ tags:
 depends:
   - name: ModuleManager
 install:
-  - find: RSSeaDragon
-    install_to: GameData
+  - find: SeaDragon
+    install_to: GameData/NecroBones
     filter_regexp: \.craft$
-  - file: RSSeaDragon/Ships/SPH/Real Scale Sea Dragon Horizontal.craft
+  - file: Ships/SPH/RealScaleSeaDragon-Horizontal.craft
     install_to: Ships/SPH
-  - file: RSSeaDragon/Ships/VAB/Real Scale Sea Dragon.craft
+  - file: Ships/VAB/RealScaleSeaDragon.craft
     install_to: Ships/VAB
 x_via: Automated SpaceDock CKAN submission

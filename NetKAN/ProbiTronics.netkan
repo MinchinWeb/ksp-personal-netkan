@@ -5,4 +5,9 @@ license: CC-BY-SA-4.0
 $vref: '#/ckan/ksp-avc'
 tags:
   - parts
+depends:
+  - name: ModuleManager
+install:
+  - find: ProbiTronics
+    install_to: GameData
 x_via: Automated SpaceDock CKAN submission

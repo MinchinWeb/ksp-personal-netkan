@@ -6,10 +6,12 @@ $vref: '#/ckan/ksp-avc'
 tags:
   - parts
   - crewed
+depends:
+  - name: ModuleManager
 install:
   - find: MIR
     install_to: GameData
     filter_regexp: \.craft$
-  - file: GameData/MIR/Subassemblies/MIR DC.craft
+  - file: Ships/VAB/MIRstation.craft
     install_to: Ships/VAB
 x_via: Automated SpaceDock CKAN submission

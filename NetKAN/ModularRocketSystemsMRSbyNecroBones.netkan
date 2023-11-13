@@ -9,9 +9,9 @@ tags:
 depends:
   - name: ModuleManager
 install:
-  - find: ModRocketSys
-    install_to: GameData
+  - find: ModularRocketSystems
+    install_to: GameData/NecroBones
     filter_regexp: \.craft$
-  - file: ModRocketSys/MRS Drone.craft
+  - file: Ships/SPH/MRS Drone.craft
     install_to: Ships/SPH
 x_via: Automated SpaceDock CKAN submission

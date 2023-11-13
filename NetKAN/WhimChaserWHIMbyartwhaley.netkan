@@ -6,6 +6,8 @@ $vref: '#/ckan/ksp-avc'
 tags:
   - parts
   - crewed
+depends:
+  - name: ModuleManager
 install:
   - find: AxialAerospace
     install_to: GameData

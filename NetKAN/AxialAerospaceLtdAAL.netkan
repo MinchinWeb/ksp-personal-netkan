@@ -4,6 +4,6 @@ $kref: '#/ckan/spacedock/3076'
 license: GPL-2.0
 $vref: '#/ckan/ksp-avc'
 install:
-  - find: ''
-    install_to: GameData
+  - find: AxialAerospaceLtd
+    install_to: GameData/AxialAerospace
 x_via: Automated SpaceDock CKAN submission

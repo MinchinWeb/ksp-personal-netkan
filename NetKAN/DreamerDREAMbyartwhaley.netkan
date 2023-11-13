@@ -1,14 +1,17 @@
 spec_version: v1.18
 identifier: DreamerDREAMbyartwhaley
 $kref: '#/ckan/spacedock/2999'
+$vref: '#/ckan/ksp-avc'
 license: GPL-2.0
 tags:
   - parts
   - crewed
+depends:
+  - name: ModuleManager
 install:
   - find: AxialAerospace
     install_to: GameData
     filter_regexp: \.craft$
-  - file: Dreamer Launch Ready.craft
+  - file: Ships/VAB/DreamerLaunchReady.craft
     install_to: Ships/VAB
 x_via: Automated SpaceDock CKAN submission

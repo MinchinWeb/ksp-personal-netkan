@@ -6,6 +6,8 @@ $vref: '#/ckan/ksp-avc'
 tags:
   - plugin
   - parts
+depends:
+  - name: ModuleManager
 install:
   - find: LunaticAeronautics
     install_to: GameData

@@ -5,6 +5,8 @@ license: GPL-2.0
 $vref: '#/ckan/ksp-avc'
 tags:
   - parts
+depends:
+  - name: ModuleManager
 install:
   - find: EternoRest2000
     install_to: GameData
