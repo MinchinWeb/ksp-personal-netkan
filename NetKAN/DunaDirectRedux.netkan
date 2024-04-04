@@ -2,6 +2,10 @@ spec_version: v1.27
 identifier: DunaDirectRedux
 license: CC-BY-4.0
 _$kref: '#/ckan/github/dangaffa/DunaDirectRedux'
+resources:
+  homepage: >-
+    https://forum.kerbalspaceprogram.com/topic/179544-1101-duna-direct/?do=findComment&comment=4329319
+  repository: https://github.com/dangaffa/DunaDirectRedux/tree/main
 ksp_version_min: 1.10.1
 tags:
   - parts
@@ -37,23 +41,23 @@ abstract: |
   Use without mods as stock, or the suggested mods.
 
   Flight plan:
+  - Launch inside 5m expanded fairing
+  - Aim for Duna
+  - Aerobreaking entry at Duna
+  - Heatshield jettison and parachute deployment
+  - Landing gear deployment and reverse thrust
+  - Perform science!
+  - Built-in Sabatier conversion regenerates fuel for return
+  - Repack parachute
+  - Launch for Kerbin
+  - Jettison first stage
+  - Atmospheric re-entry at Kerbin
+  - Parachute deployment and landing
 
-  Launch inside 5m expanded fairing
-  Aim for Duna
-  Aerobreaking entry at Duna
-  Heatshield jettison and parachute deployment
-  Landing gear deployment and reverse thrust
-  Perform science!
-  Built-in Sabatier conversion regenerates fuel for return
-  Repack parachute
-  Launch for Kerbin
-  Jettison first stage
-  Atmospheric re-entry at Kerbin
-  Parachute deployment and landing
   Flight crew:
-  Pilot for vessel control
-  Engineer for repacking parachutes
-  Two scientists for running the science lab
+  - Pilot for vessel control
+  - Engineer for repacking parachutes
+  - Two scientists for running the science lab
 install:
   - find: MarsDirect
     install_to: GameData
