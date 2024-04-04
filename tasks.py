@@ -21,6 +21,8 @@ def make_ckan(ctx, github_token=None):
 
     if github_token:
         GITHUB_TOKEN_STR = f" --github-token {github_token}"
+    else:
+        GITHUB_TOKEN_STR = ""
 
     for dirpath, dirnames, filenames in NETKAN_DIR.walk():
         # print(dirpath, dirnames, filenames)
@@ -32,6 +34,7 @@ def make_ckan(ctx, github_token=None):
             output_dir.mkdir(exist_ok=True)
 
             ctx.run(f"{NETKAN_EXE} --outputdir {output_dir} --verbose{GITHUB_TOKEN_STR} {NETKAN_DIR / fn}")
+    print("")
     print("**end**")
     print("")
     print("Make sure to push an update to the metadata repo!")
