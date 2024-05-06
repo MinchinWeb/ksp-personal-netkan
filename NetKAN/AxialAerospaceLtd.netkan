@@ -1,0 +1,11 @@
+spec_version: v1.18
+identifier: AxialAerospaceLtd
+_$kref: '#/ckan/spacedock/3076'
+$kref: "#/ckan/github/zer0Kerbal/AxialAerospaceLtd"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+install:
+  - find: AxialAerospaceLtd
+    install_to: GameData/AxialAerospace
+x_netkan_github:
+  use_source_archive: true

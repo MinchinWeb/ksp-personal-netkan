@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: SpaceY-Corp
+_$kref: '#/ckan/spacedock/3093'
+license: CC-BY-SA
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+depends:
+  - name: ModuleManager
+suggests:
+  - name: SpaceY-Expanded
+  - name: SpaceY-Lifters
+install:
+  - find: SpaceY
+    install_to: GameData
+
+name: "SpaceY Corporation (SYC)"
+abstract: "Space, why? Because it's there! Y is greater than X. Adds SpaceY Corporation's agent, flags, and common config files used in all SpaceY add-ons for Kerbal Space Program."
+author: "zer0Kerbal"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/spaceycorp
+  repository: https://github.com/zer0Kerbal/SpaceYCorp
+
+download: "https://mediafilez.forgecdn.net/files/4611/720/SpaceYCorp-1.0.4.0-release-CF.zip"

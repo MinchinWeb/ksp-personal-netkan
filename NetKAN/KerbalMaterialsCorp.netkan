@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: KerbalMaterialsCorp
+_$kref: '#/ckan/spacedock/3176'
+$kref: "#/ckan/github/zer0Kerbal/KerbalMaterialsCorp"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: KerbalMaterialsCorp
+    install_to: GameData/Nazari
+x_netkan_github:
+  use_source_archive: true

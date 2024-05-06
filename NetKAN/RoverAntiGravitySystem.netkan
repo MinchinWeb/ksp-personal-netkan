@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: RoverAntiGravitySystem
+_$kref: '#/ckan/spacedock/3166'
+$kref: "#/ckan/github/zer0Kerbal/RoverAntiGravitySystem"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - plugin
+  - parts
+depends:
+  - name: ModuleManager
+install:
+  - find: RoverAntiGravitySystem
+    install_to: GameData/LunaticAeronautics
+x_netkan_github:
+  use_source_archive: true

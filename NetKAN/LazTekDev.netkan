@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: LazTekDev
+_$kref: '#/ckan/spacedock/3172'
+$kref: "#/ckan/github/zer0Kerbal/LazTekDev"
+license: CC-BY-ND
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: LazTekDev
+    install_to: GameData/LaxTek
+x_netkan_github:
+  use_source_archive: true

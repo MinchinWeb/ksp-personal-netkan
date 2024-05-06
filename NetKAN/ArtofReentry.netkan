@@ -1,11 +1,13 @@
 spec_version: v1.18
 identifier: ArtofReentry
 $kref: '#/ckan/spacedock/3046'
+_$kref: "#/ckan/github/zer0Kerbal/ArtofReentry"
 $vref: '#/ckan/ksp-avc'
 license: CC-BY-ND-4.0
 tags:
   - parts
 install:
   - find: ArtOfReentry
-    install_to: GameData
-x_via: Automated SpaceDock CKAN submission
+    install_to: GameData/Rareden
+x_netkan_github:
+  use_source_archive: true

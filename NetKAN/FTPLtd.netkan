@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: FTPLtd
+_$kref: '#/ckan/spacedock/3109'
+$kref: "#/ckan/github/zer0Kerbal/FTPLtd"
+license: CC-BY-SA
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: FTPLtd
+    install_to: GameData/FuelTanksPlus
+x_netkan_github:
+  use_source_archive: true

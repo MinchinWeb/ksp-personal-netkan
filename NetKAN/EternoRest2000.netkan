@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: EternoRest2000
+_$kref: '#/ckan/spacedock/3126'
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+install:
+  - find: EternoRest2000
+    install_to: GameData
+
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/eternorest2000
+  repository: https://github.com/zer0Kerbal/EternoRest2000/
+author: "zer0Kerbal, Aphtonites, Acea_"
+name: "Eterno-Rest 2000 (REST)"
+abstract: |
+  Tragic disasters happen in the world of rocketry now and then, give your
+  highest achieving Kerbals the burial they deserve with this pressurized
+  coffin!  Now includes contract to launch a dead crew member into space.
+
+download: https://mediafilez.forgecdn.net/files/4825/451/EternoRest2000-1.3.1.0-release-CF.zip

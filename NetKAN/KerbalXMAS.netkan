@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: KerbalXMAS
+_$kref: '#/ckan/spacedock/3179'
+$kref: "#/ckan/github/zer0Kerbal/KerbalXMAS"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - plugin
+  - parts
+  - crewed
+depends:
+  - name: ModuleManager
+install:
+  - find: KerbalXMAS
+    install_to: GameData/LunaticAeronautics
+x_netkan_github:
+  use_source_archive: true

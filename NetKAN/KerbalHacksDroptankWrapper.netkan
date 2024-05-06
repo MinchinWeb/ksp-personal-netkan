@@ -1,0 +1,23 @@
+spec_version: v1.18
+identifier: KerbalHacksDroptankWrapper
+license: CC-BY-NC-SA
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+suggests:
+  - name: KerbalHacksDroptankIII
+install:
+  - find: DropTanks
+    install_to: GameData/KerbalHacks
+
+name: Drop Tanks (DROP)
+abstract: |
+  Stockalike curved wraparound (conformal) droptanks with an integrated
+  decoupler.
+author: "zer0Kerbal, Enceos"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/droptanks
+  repository: https://github.com/zer0Kerbal/DropTanks/
+  homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/209332-*/
+
+download: https://mediafilez.forgecdn.net/files/4604/35/DropTanks-1.2.1.0-release-CF.zip

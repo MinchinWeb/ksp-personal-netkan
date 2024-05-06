@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: BobCatIndustries
+_$kref: '#/ckan/spacedock/3120'
+$kref: "#/ckan/github/zer0Kerbal/BobCatInd"
+license: CC-BY-SA-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: BobCatInd
+    install_to: GameData/BobCat
+x_netkan_github:
+  use_source_archive: true

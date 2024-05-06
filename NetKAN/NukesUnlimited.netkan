@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: NukesUnlimited
+_$kref: '#/ckan/spacedock/3084'
+$kref: "#/ckan/github/zer0Kerbal/NukesUnlimited"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+suggests:
+  - name: NukesTinyGirders
+  - name: NukesTinyPods
+  - name: NukesTinyEngines
+install:
+  - find: NukesUnlimited
+    install_to: GameData/Nuke
+x_netkan_github:
+  use_source_archive: true

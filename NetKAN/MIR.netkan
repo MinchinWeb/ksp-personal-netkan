@@ -1,0 +1,41 @@
+spec_version: v1.18
+identifier: MIR
+_$kref: '#/ckan/spacedock/3115'
+license: CC-BY-ND-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - crewed
+depends:
+  - name: ModuleManager
+install:
+  - find: MIR
+    install_to: GameData
+    filter_regexp: \.craft$
+  - file: Ships/VAB/MIRstation.craft
+    install_to: Ships/VAB
+
+name: Мир Space Station (MIR)
+abstract: |
+  Мир (MIR) Space Station for Kerbal Space Program.
+  
+  Modular space station:
+    - Мир (MIR) Core module with living quarters, six docking ports and a detailed IVA.
+    - Kvant-1 Astrophysics module with an X-ray experiment and a docking port.
+    - FSM space tug for delivering Kvant 1 to the station.
+    - Kvant-2 physics module with an airlock.
+    - Kristall docking module with two additional docking ports.
+    - Spektr power module with 4 solar panels.
+    - Priroda Kerbin observation module with a big Travers antenna.
+    - Docking Compartment for improving docking clearance. By Blista100, used with permission.
+    - Zarya FGB with high fuel load and RCS configured for flying with Unity module attached.
+    - Zvezda service module (MIR Core variant) with 4 docking ports.
+    - New solar panels and an ISS-style docking port.
+
+author: "zer0Kerbal, Sampa, BobCat, DECQ, Dragon01"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/mir
+  repository: https://github.com/zer0Kerbal/MIR/
+  homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/209731-*/
+
+download: https://mediafilez.forgecdn.net/files/4592/113/MIR-4.0.99.3-prerelease-CF.zip

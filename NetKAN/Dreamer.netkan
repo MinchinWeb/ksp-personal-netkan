@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: Dreamer
+_$kref: '#/ckan/spacedock/2999'
+$kref: "#/ckan/github/zer0Kerbal/Dreamer"
+$vref: '#/ckan/ksp-avc'
+license: GPL-2.0
+tags:
+  - parts
+  - crewed
+depends:
+  - name: ModuleManager
+  - name: AxialAerospaceLtd
+install:
+  - find: Dreamer
+    install_to: GameData/AxialAerospace
+    filter_regexp: \.craft$
+  - find: VAB
+    install_to: Ships
+x_netkan_github:
+  use_source_archive: true

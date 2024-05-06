@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: CoyoteSpaceIndustries
+_$kref: '#/ckan/spacedock/3204'
+$kref: "#/ckan/github/zer0Kerbal/CoyoteSpaceIndustries"
+license: CC-BY-ND-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+depends:
+  - name: ModuleManager
+install:
+  - find: CoyoteSpaceIndustries
+    install_to: GameData/CoyoteSpace
+x_netkan_github:
+  use_source_archive: true

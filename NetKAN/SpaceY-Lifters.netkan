@@ -1,0 +1,27 @@
+spec_version: v1.18
+identifier: SpaceY-Lifters
+license: CC-BY-NC-SA
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - tech-tree
+depends:
+  - name: ModuleManager
+  - name: SpaceY-Corp
+suggests:
+  - name: SpaceY-Expanded
+install:
+  - find: SpaceYLifters
+    install_to: GameData/SpaceY
+
+name: SpaceY Lifters (SYL)
+abstract: |
+  78 parts for large lifting rockets, 5m rocket parts, large SRBs, and matching
+  decouplers for Kerbal Space Program.
+author: "zer0Kerbal, NercoBones"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/spaceylifters
+  repository: https://github.com/zer0Kerbal/SpaceYLifters/
+  homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/209445-*/
+
+download: https://mediafilez.forgecdn.net/files/4611/678/SpaceYLifters-1.9.99.3-prerelease-CF.zip

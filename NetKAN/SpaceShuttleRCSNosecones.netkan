@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: SpaceShuttleRCSNosecones
+_$kref: '#/ckan/spacedock/3068'
+$kref: "#/ckan/github/zer0Kerbal/SpaceShuttleRCSNosecones"
+license: GPL-3.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+install:
+  - find: SpaceShuttleRCSNosecones
+    install_to: GameData
+x_netkan_github:
+  use_source_archive: true

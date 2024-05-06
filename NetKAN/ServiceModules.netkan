@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: ServiceModules
+_$kref: '#/ckan/spacedock/3037'
+$kref: "#/ckan/github/zer0Kerbal/ServiceModules"
+license: CC-BY-ND-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+  - name: HotBeverageInc
+install:
+  - find: ServiceModules
+    install_to: GameData/HotBeverage
+x_netkan_github:
+  use_source_archive: true

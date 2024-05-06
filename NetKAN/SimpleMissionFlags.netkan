@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: SimpleMissionFlags
+_$kref: '#/ckan/spacedock/3083'
+$kref: "#/ckan/github/zer0Kerbal/SimpleMissionFlags"
+license: CC-BY-SA-4.0
+$vref: '#/ckan/ksp-avc'
+depends:
+  - name: KerbalHacksLtd
+install:
+  - find: SimpleMissionFlags
+    install_to: GameData/KerbalHacks
+x_netkan_github:
+  use_source_archive: true

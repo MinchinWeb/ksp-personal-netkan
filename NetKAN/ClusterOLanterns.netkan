@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: ClusterOLanterns
+_$kref: '#/ckan/spacedock/3141'
+$kref: "#/ckan/github/zer0Kerbal/ClusterOLanterns"
+license: CC-BY-NC-SA-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+install:
+  - find: ClusterOLanterns
+    install_to: GameData/nli2work
+x_netkan_github:
+  use_source_archive: true

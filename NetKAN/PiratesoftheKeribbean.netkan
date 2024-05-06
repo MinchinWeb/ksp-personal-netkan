@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: PiratesoftheKeribbean
+license: CC-BY-ND
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+depends:
+  - name: ModuleManager
+install:
+  - find: RustyStar
+    install_to: GameData
+
+author: "zer0Kerbal, GagaX"
+name: "Pirates of the Keribbean (PotK)"
+abstract: |
+  Where there is space there are space pirates.
+
+  This part addon contains twenty (20) parts and three (3) unique IVA's, all
+  with pirate aesthetics. For Kerbal Space Program.
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/piratesofthekeribbean
+  repository: https://github.com/zer0Kerbal/PiratesoftheKeribbean/
+
+download: https://mediafilez.forgecdn.net/files/4863/432/PiratesoftheKeribbean-0.9.99.2-prerelease-CF.zip

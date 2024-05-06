@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: WhimChaser
+_$kref: '#/ckan/spacedock/3071'
+$kref: "#/ckan/github/zer0Kerbal/WhimChaser"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - crewed
+depends:
+  - name: ModuleManager
+  - name: AxialAerospaceLtd
+install:
+  - find: WhimChaser
+    install_to: GameData/AxialAerospace
+x_netkan_github:
+  use_source_archive: true

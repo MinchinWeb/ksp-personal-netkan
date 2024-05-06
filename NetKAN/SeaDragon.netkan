@@ -1,0 +1,21 @@
+spec_version: v1.18
+identifier: SeaDragon
+_$kref: '#/ckan/spacedock/440'
+$kref: "#/ckan/github/zer0Kerbal/SeaDragon"
+license: CC-BY-NC-SA-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - tech-tree
+depends:
+  - name: ModuleManager
+install:
+  - find: SeaDragon
+    install_to: GameData/NecroBones
+    filter_regexp: \.craft$
+  - find: SPH
+    install_to: Ships
+  - find: VAB
+    install_to: Ships
+x_netkan_github:
+  use_source_archive: true

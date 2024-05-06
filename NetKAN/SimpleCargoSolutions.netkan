@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: SimpleCargoSolutions
+_$kref: '#/ckan/spacedock/3139'
+$kref: "#/ckan/github/zer0Kerbal/SimpleCargoSolutions"
+$vref: '#/ckan/ksp-avc'
+license: GPL-2.0
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+  - name: AxialAerospaceLtd
+install:
+  - find: SimpleCargoSolutions
+    install_to: GameData/AxialAerospace
+    filter: Thumbs.db
+x_netkan_github:
+  use_source_archive: true

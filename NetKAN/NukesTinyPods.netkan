@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: NukesTinyPods
+_$kref: '#/ckan/spacedock/3086'
+$kref: "#/ckan/github/zer0Kerbal/NukesTinyPods"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - crewed
+depends:
+  - name: ModuleManager
+  - name: NukesUnlimited
+install:
+  - find: NukesTinyPods
+    install_to: GameData/Nuke
+x_netkan_github:
+  use_source_archive: true

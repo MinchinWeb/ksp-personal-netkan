@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: SensorModules
+_$kref: '#/ckan/spacedock/3184'
+$kref: "#/ckan/github/zer0Kerbal/SensorModules"
+license: CC-BY-ND-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: HotBeverageInc
+install:
+  - find: SensorModules
+    install_to: GameData/HotBeverage
+x_netkan_github:
+  use_source_archive: true

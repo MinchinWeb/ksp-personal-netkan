@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: NukesTinyGirders
+_$kref: '#/ckan/spacedock/3085'
+$kref: "#/ckan/github/zer0Kerbal/NukesTinyGirders"
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+  - name: NukesUnlimited
+install:
+  - find: NukesTinyGirders
+    install_to: GameData/Nuke
+x_netkan_github:
+  use_source_archive: true

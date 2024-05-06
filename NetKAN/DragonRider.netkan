@@ -1,15 +1,16 @@
 spec_version: v1.18
-identifier: ProbiTronics
-_$kref: '#/ckan/spacedock/3029'
-$kref: "#/ckan/github/zer0Kerbal/ProbiTronics"
-license: CC-BY-SA-4.0
+identifier: DragonRider
+_$kref: '#/ckan/spacedock/3140'
+$kref: "#/ckan/github/zer0Kerbal/DragonRider"
+license: CC-BY-ND
 $vref: '#/ckan/ksp-avc'
 tags:
   - parts
+  - crewed
 depends:
   - name: ModuleManager
 install:
-  - find: ProbiTronics
+  - find: DragonRider
     install_to: GameData
 x_netkan_github:
   use_source_archive: true

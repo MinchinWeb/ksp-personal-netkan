@@ -2,6 +2,12 @@ from invoke import task
 from pathlib import Path
 import os
 
+"""
+TODO: Add "continue from"
+TODO: Add pickup of GIthub token from file
+TODO: Add create netkan file from GitHub link
+"""
+
 
 HERE = Path(__file__).parent
 NETKAN_DIR = HERE / 'NetKAN'

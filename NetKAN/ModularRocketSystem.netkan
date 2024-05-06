@@ -1,0 +1,26 @@
+spec_version: v1.18
+identifier: ModularRocketSystem
+_$kref: '#/ckan/spacedock/86'
+license: CC-BY-SA-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - tech-tree
+depends:
+  - name: ModuleManager
+install:
+  - find: ModularRocketSystems
+    install_to: GameData/NecroBones
+    filter_regexp: \.craft$
+  - file: Ships/SPH/MRS Drone.craft
+    install_to: Ships/SPH
+
+author: "zer0Kerbal, NecroBones"
+name: "Modular Rocket Systems (MRS)"
+abstract: |
+  A stock-alike parts pack with 67 parts that fills in a variety of gaps in the stock lineup of rocketry parts.
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/modularrocketsystems
+  repository: https://github.com/zer0Kerbal/ModularRocketSystems/
+
+download: https://mediafilez.forgecdn.net/files/4629/447/ModularRocketSystems-1.13.99.2-prerelease-CF.zip

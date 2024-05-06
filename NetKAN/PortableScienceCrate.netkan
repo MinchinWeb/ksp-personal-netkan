@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: PortableScienceCrate
+_$kref: '#/ckan/spacedock/3080'
+$kref: "#/ckan/github/zer0Kerbal/PortableScienceCrate"
+license: CC-BY
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+depends:
+  - name: KerbalHacksLtd
+install:
+  - find: PortableScienceCrate
+    install_to: GameData/KerbalHacks
+x_netkan_github:
+  use_source_archive: true

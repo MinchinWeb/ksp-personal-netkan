@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: NohArksPicknPull
+_$kref: '#/ckan/spacedock/3130'
+$kref: "#/ckan/github/zer0Kerbal/PicknPull"
+license: CC-BY-NC-SA-4.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: PicknPull
+    install_to: GameData/nli2work
+x_netkan_github:
+  use_source_archive: true

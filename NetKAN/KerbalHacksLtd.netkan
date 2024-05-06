@@ -1,0 +1,26 @@
+spec_version: v1.18
+identifier: KerbalHacksLtd
+_$kref: '#/ckan/spacedock/3082'
+license: GPL-2.0
+$vref: '#/ckan/ksp-avc'
+tags:
+  - config
+install:
+  - find: KerbalHacks
+    install_to: GameData
+
+name: Kerbal Hacks Limited (KHL)
+abstract: |
+  Space.Just.Got.Hacked.™
+
+  Agent, Flags, and common config files used in all Kerbal Hacks Ltd's (KHL)
+  add-ons for Kerbal Space Program.
+author: "zer0Kerbal, enceos"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/kerbalhacksltd
+  repository: https://github.com/zer0Kerbal/KerbalHacksLtd/
+  homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/209352-*/
+
+download: https://mediafilez.forgecdn.net/files/4606/524/KerbalHacksLtd-1.0.2.0-release-CF.zip
+
+

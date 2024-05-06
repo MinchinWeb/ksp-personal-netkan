@@ -1,0 +1,28 @@
+spec_version: v1.18
+identifier: SpaceY-Expanded
+_$kref: '#/ckan/spacedock/89'
+license: CC-BY-NC-SA
+$vref: '#/ckan/ksp-avc'
+tags:
+  - parts
+  - tech-tree
+depends:
+  - name: ModuleManager
+  - name: SpaceY-Corp
+  - name: SpaceY-Lifters
+install:
+  - find: SpaceYExpanded
+    install_to: GameData/SpaceY
+
+name: SpaceY Expanded (SYX)
+abstract: |
+  An expansion pack for the SpaceY Lifters (SYL) parts addon which adds 7.5m
+  parts, plus additional engines, accessories, and other parts that go beyond
+  the original stated purpose of SpaceY Heavy Lifters.
+author: "zer0Kerbal, NercoBones"
+resources:
+  curse: https://www.curseforge.com/kerbal/ksp-mods/spaceyexpanded
+  repository: https://github.com/zer0Kerbal/SpaceYExpanded/
+  homepage: https://forum.kerbalspaceprogram.com/index.php?/topic/211576-*/
+
+download: https://mediafilez.forgecdn.net/files/4611/70/SpaceYExpanded-1.4.99.3-prerelease-CF.zip
