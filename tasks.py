@@ -16,15 +16,23 @@ CKAN_DIR = CKAN_DIR.resolve()
 def make_ckan(ctx, github_token=None):
     print("**starting**")
     # print(HERE)
-    print(f"{NETKAN_DIR=!s}")
-    print(f"{CKAN_DIR=!s}")
+    print(f"{NETKAN_DIR=!s}", end=" ")
+    if NETKAN_DIR.exists():
+        print("(ok)")
+    else:
+        print("(missing)")
+    print(f"{CKAN_DIR=!s}", end=" ")
+    if CKAN_DIR.exists():
+        print("(ok)")
+    else:
+        print("(missing)")
 
     if github_token:
         GITHUB_TOKEN_STR = f" --github-token {github_token}"
     else:
         GITHUB_TOKEN_STR = ""
 
-    for dirpath, dirnames, filenames in NETKAN_DIR.walk():
+    for dirpath, dirnames, filenames in os.walk(NETKAN_DIR):
         # print(dirpath, dirnames, filenames)
         for fn in filenames:
             fn = Path(fn)
