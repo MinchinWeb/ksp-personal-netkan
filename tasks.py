@@ -1,6 +1,8 @@
-from invoke import task
-from pathlib import Path
 import os
+from pathlib import Path
+import sys
+
+from invoke import task
 
 """
 TODO: Add create netkan file from GitHub link
@@ -8,18 +10,19 @@ TODO: Add create netkan file from GitHub link
 
 
 HERE = Path(__file__).parent
-NETKAN_DIR = HERE / 'NetKAN'
-CKAN_DIR = HERE / '..' / 'ksp-personal-ckan-meta'
+NETKAN_DIR = HERE / "NetKAN"
+CKAN_DIR = HERE / ".." / "ksp-personal-ckan-meta"
 NETKAN_EXE = "netkan.exe"
 
 NETKAN_DIR = NETKAN_DIR.resolve()
 CKAN_DIR = CKAN_DIR.resolve()
 
 
-@task(help={
-    "github_token": "GitHub API token. Also looks for '.gh-token.txt' file in root directory.",
-    "continue_from": "Only generate for projects named after this."
-}
+@task(
+    help={
+        "github_token": "GitHub API token. Also looks for '.gh-token.txt' file in root directory.",
+        "continue_from": "Only generate for projects named after this.",
+    }
 )
 def make_ckan(ctx, github_token=None, continue_from=None):
     print("**starting**")
@@ -39,9 +42,11 @@ def make_ckan(ctx, github_token=None, continue_from=None):
         GITHUB_TOKEN_STR = f" --github-token {github_token}"
     else:
         try:
-            with open(".gh-token.txt", "r") as fn:
+            with open(HERE / ".gh-token.txt", "r") as fn:
                 GITHUB_TOKEN_STR = fn.read().strip()
-                print(f"GITHUB_TOKEN_STR={GITHUB_TOKEN_STR[:3]}[...]{GITHUB_TOKEN_STR[-3:]}")
+                print(
+                    f"GITHUB_TOKEN_STR={GITHUB_TOKEN_STR[:3]}[...]{GITHUB_TOKEN_STR[-3:]}"
+                )
         except FileNotFoundError:
             GITHUB_TOKEN_STR = ""
             print("No GitHub API token")
@@ -60,11 +65,14 @@ def make_ckan(ctx, github_token=None, continue_from=None):
             output_dir = CKAN_DIR / fn.stem
             output_dir.mkdir(exist_ok=True)
 
-            ctx.run(f"{NETKAN_EXE} --outputdir {output_dir} --verbose{GITHUB_TOKEN_STR} {NETKAN_DIR / fn}")
-    print("")
+            ctx.run(
+                f"{NETKAN_EXE} --outputdir {output_dir} --verbose{GITHUB_TOKEN_STR} {NETKAN_DIR / fn}"
+            )
+    print()
     print("**end**")
-    print("")
+    print()
     print("Make sure to push an update to the metadata repo!")
+
 
 @task
 def apply_patches(ctx):
@@ -76,8 +84,27 @@ def apply_patches(ctx):
             if fn.suffix == ".patch":
                 print()
                 print(f"    {fn!s}")
-                
+
                 ctx.run(f"git am {fn}")
     print("**end**")
-    print("")
+    print()
     print("Make sure to remove the applied patches!")
+
+@task
+def from_github(ctx, repo=None):
+    if repo is None:
+        print("Must supply a GitHub repo name. Exiting...")
+        sys.exit(1)
+
+    repo_name = repo.rpartition()[-1]
+
+    identifier = input(f"Identifier? [{repo_name}] ")
+    if identifier == "":
+        identifier = repo_name
+
+    my_license = input("License? ")
+    # tags
+    # depends
+    # suggests
+    # install
+    # use source archive?
