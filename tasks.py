@@ -3,7 +3,6 @@ from pathlib import Path
 import os
 
 """
-TODO: Add pickup of GIthub token from file
 TODO: Add create netkan file from GitHub link
 """
 
@@ -18,7 +17,7 @@ CKAN_DIR = CKAN_DIR.resolve()
 
 
 @task(help={
-    "github_token": "GitHub API token",
+    "github_token": "GitHub API token. Also looks for '.gh-token.txt' file in root directory.",
     "continue_from": "Only generate for projects named after this."
 }
 )
@@ -39,19 +38,25 @@ def make_ckan(ctx, github_token=None, continue_from=None):
     if github_token:
         GITHUB_TOKEN_STR = f" --github-token {github_token}"
     else:
-        GITHUB_TOKEN_STR = ""
+        try:
+            with open(".gh-token.txt", "r") as fn:
+                GITHUB_TOKEN_STR = fn.read().strip()
+                print(f"GITHUB_TOKEN_STR={GITHUB_TOKEN_STR[:3]}[...]{GITHUB_TOKEN_STR[-3:]}")
+        except FileNotFoundError:
+            GITHUB_TOKEN_STR = ""
+            print("No GitHub API token")
 
     for dirpath, dirnames, filenames in os.walk(NETKAN_DIR):
         # print(dirpath, dirnames, filenames)
         for fn in filenames:
             fn = Path(fn)
-            print()
-            print(f"    {fn!s}")
 
             if continue_from and fn.stem < continue_from:
-                print("        skipping!")
+                print(f"    {fn!s} -- skipping!")
                 continue
 
+            print()
+            print(f"    {fn!s}")
             output_dir = CKAN_DIR / fn.stem
             output_dir.mkdir(exist_ok=True)
 
