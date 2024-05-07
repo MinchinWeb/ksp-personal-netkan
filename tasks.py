@@ -3,7 +3,6 @@ from pathlib import Path
 import os
 
 """
-TODO: Add "continue from"
 TODO: Add pickup of GIthub token from file
 TODO: Add create netkan file from GitHub link
 """
@@ -18,8 +17,12 @@ NETKAN_DIR = NETKAN_DIR.resolve()
 CKAN_DIR = CKAN_DIR.resolve()
 
 
-@task
-def make_ckan(ctx, github_token=None):
+@task(help={
+    "github_token": "GitHub API token",
+    "continue_from": "Only generate for projects named after this."
+}
+)
+def make_ckan(ctx, github_token=None, continue_from=None):
     print("**starting**")
     # print(HERE)
     print(f"{NETKAN_DIR=!s}", end=" ")
@@ -44,6 +47,11 @@ def make_ckan(ctx, github_token=None):
             fn = Path(fn)
             print()
             print(f"    {fn!s}")
+
+            if continue_from and fn.stem < continue_from:
+                print("        skipping!")
+                continue
+
             output_dir = CKAN_DIR / fn.stem
             output_dir.mkdir(exist_ok=True)
 
