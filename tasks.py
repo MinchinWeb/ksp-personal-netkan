@@ -25,6 +25,7 @@ CKAN_DIR = CKAN_DIR.resolve()
     }
 )
 def make_ckan(ctx, github_token=None, continue_from=None):
+    """Turn netkan files into (useable) ckan files!"""
     print("**starting**")
     # print(HERE)
     print(f"{NETKAN_DIR=!s}", end=" ")
@@ -76,6 +77,7 @@ def make_ckan(ctx, github_token=None, continue_from=None):
 
 @task
 def apply_patches(ctx):
+    """Turn patch files into netkan files."""
     print("**starting**")
     print(f"{HERE.resolve()=!s}")
     for dirpath, dirnames, filenames in HERE.resolve().walk():
@@ -90,21 +92,86 @@ def apply_patches(ctx):
     print()
     print("Make sure to remove the applied patches!")
 
+def input_list(intro="", msg=""):
+    """Use input to get multiple items, and return the list."""
+    if intro:
+        print(intro)
+
+    my_list = []
+    while True:
+        my_item = input(msg)
+        if my_item == "":
+            return my_list
+        else:
+            my_list.append(my_item)
+
 @task
 def from_github(ctx, repo=None):
-    if repo is None:
-        print("Must supply a GitHub repo name. Exiting...")
-        sys.exit(1)
+    """Create a .netkan file for a GitHub repo."""
 
-    repo_name = repo.rpartition()[-1]
+    if repo is None:
+        repo = input("GitHub repo? ")
+
+    repo = repo.replace("https://", "")
+    repo = repo.replace("github.com/", "")
+
+    print(f'    repo is "{repo}"')
+
+    repo_name = repo.rpartition("/")[-1]
 
     identifier = input(f"Identifier? [{repo_name}] ")
     if identifier == "":
         identifier = repo_name
 
     my_license = input("License? ")
-    # tags
-    # depends
-    # suggests
-    # install
-    # use source archive?
+
+    tags = input_list("Tags (enter blank item to end)", " ? ")
+    depends = input_list("depends (on what other packages) (enter blank item to end)", " ? ")
+    suggests = input_list("suggests (what other packages) (enter blank item to end)", " ? ")
+    install_find = input(f"install folder [{repo_name}] ? ")
+    install_to = input(f"install to: GameData/[] ? ")
+    if install_to:
+        install_to = "/" + install_to
+    source_archive = input("Use Github source archive? [Y/n] ")
+    if source_archive in ["n", "no", "N", "No", "NO"]:
+        source_archive = False
+    else:
+        source_archive = True
+
+    my_filename = (NETKAN_DIR / identifier).with_suffix(".netkan")
+    with open(my_filename, "w") as fn:
+        fn.write(
+f"""
+spec_version: v1.18
+identifier: {identifier}
+$kref: "#/ckan/github/{repo}"
+license: {my_license}
+$vref: "#/ckan/ksp-avc"
+"""
+        )
+        if tags:
+            fn.write("tags:\n")
+            for tag in tags:
+                fn.write(f"  - {tag}\n")
+        if depends:
+            fn.write("depends:\n")
+            for depend in depends:
+                fn.write("  - name: {depend}\n")
+        fn.write(
+f"""
+install:
+  - find: {install_find}
+    install_to: GameData{install_to}
+"""
+        )
+        if source_archive:
+            fn.write(
+"""
+x_netkan_github:
+  use_source_archive: true
+"""
+            )
+        fn.write("x_via: MinchinWeb's GitHut to NetKan")
+
+    print()
+    print(f'** Written to "{my_filename}". Please confirm details!')
