@@ -1,3 +1,4 @@
+import inspect
 import os
 from pathlib import Path
 import sys
@@ -114,6 +115,7 @@ def from_github(ctx, repo=None):
 
     repo = repo.replace("https://", "")
     repo = repo.replace("github.com/", "")
+    repo = repo.rstrip("/")
 
     print(f'    repo is "{repo}"')
 
@@ -128,8 +130,12 @@ def from_github(ctx, repo=None):
     tags = input_list("Tags (enter blank item to end)", " ? ")
     depends = input_list("depends (on what other packages) (enter blank item to end)", " ? ")
     suggests = input_list("suggests (what other packages) (enter blank item to end)", " ? ")
+    supports = input_list("supports (what other packages) (enter blank item to end)", " ? ")
+    conflicts = input_list("conflicts (with what other packages) (enter blank item to end)", " ? ")
     install_find = input(f"install folder [{repo_name}] ? ")
-    install_to = input(f"install to: GameData/[] ? ")
+    if install_find == "":
+        install_find = repo_name
+    install_to = input("install to: GameData/[] ? ")
     if install_to:
         install_to = "/" + install_to
     source_archive = input("Use Github source archive? [Y/n] ")
@@ -140,15 +146,16 @@ def from_github(ctx, repo=None):
 
     my_filename = (NETKAN_DIR / identifier).with_suffix(".netkan")
     with open(my_filename, "w") as fn:
-        fn.write(
-f"""
-spec_version: v1.18
-identifier: {identifier}
-$kref: "#/ckan/github/{repo}"
-license: {my_license}
-$vref: "#/ckan/ksp-avc"
-"""
-        )
+        fn.write(inspect.cleandoc(
+            f"""
+            spec_version: v1.18
+            identifier: {identifier}
+            $kref: "#/ckan/github/{repo}"
+            license: {my_license}
+            $vref: "#/ckan/ksp-avc"
+            """
+        ))
+        fn.write("\n")
         if tags:
             fn.write("tags:\n")
             for tag in tags:
@@ -156,22 +163,37 @@ $vref: "#/ckan/ksp-avc"
         if depends:
             fn.write("depends:\n")
             for depend in depends:
-                fn.write("  - name: {depend}\n")
-        fn.write(
-f"""
-install:
-  - find: {install_find}
-    install_to: GameData{install_to}
-"""
-        )
+                fn.write(f"  - name: {depend}\n")
+        if suggests:
+            fn.write("suggests:\n")
+            for suggest in suggests:
+                fn.write(f"  - name: {suggest}\n")
+        if supports:
+            fn.write("supports:\n")
+            for support in supports:
+                fn.write(f"  - name: {support}\n")
+        if conflicts:
+            fn.write("conflicts:\n")
+            for conflict in conflicts:
+                fn.write(f"  - name: {conflict}\n")
+        fn.write(inspect.cleandoc(
+            f"""
+            install:
+              - find: {install_find}
+                install_to: GameData{install_to}
+            """
+        ))
+        fn.write("\n")
         if source_archive:
-            fn.write(
-"""
-x_netkan_github:
-  use_source_archive: true
-"""
-            )
-        fn.write("x_via: MinchinWeb's GitHut to NetKan")
+            fn.write(inspect.cleandoc(
+                """
+                x_netkan_github:
+                  use_source_archive: true
+                """
+            ))
+            fn.write("\n")
+        fn.write("x_via: MinchinWeb's GitHub to NetKan")
+        fn.write("\n")
 
     print()
     print(f'** Written to "{my_filename}". Please confirm details!')
