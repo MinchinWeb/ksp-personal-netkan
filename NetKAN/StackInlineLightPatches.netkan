@@ -1,0 +1,22 @@
+spec_version: v1.18
+identifier: StackInlineLightPatches
+$kref: "#/ckan/github/zer0Kerbal/SILPatches"
+license: GPL-2.0
+$vref: "#/ckan/ksp-avc"
+tags:
+  - config
+depends:
+  - name: StackInlineLights
+  - name: ModuleManager
+supports:
+  - name: PicoPortShielded
+  - name: SimpleCargoSolutions
+  - name: PicoPort
+  - name: KerbodynePlus
+  - name: BrightUtilitarianLuminescentBeacon
+install:
+  - find: SILPatches
+    install_to: GameData/ASET
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

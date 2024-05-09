@@ -8,6 +8,8 @@ tags:
   - config
 depends:
   - name: ModuleManager
+recommends:
+  - name: CargoFreighter
 install:
   - find: CoyoteSpaceIndustries
     install_to: GameData/CoyoteSpace

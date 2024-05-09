@@ -1,0 +1,28 @@
+spec_version: v1.18
+identifier: CargoFreighter
+$kref: "#/ckan/github/zer0Kerbal/CoyoteCargoFreighter"
+license: GPL-2.0
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - config
+  - agency
+  - comms
+  - crewed
+  - flags
+  - graphics
+  - parts
+  - resources
+depends:
+  - name: USITools
+  - name: CommunityResourcePack
+  - name: CommunityCategoryKit
+  - name: ModuleManager
+  - name: FirespitterCore
+  - name: CoyoteSpaceIndustries
+install:
+  - find: CoyoteCargoFreighter
+    install_to: GameData/CoyoteSpace
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

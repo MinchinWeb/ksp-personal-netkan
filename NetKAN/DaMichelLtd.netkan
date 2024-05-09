@@ -8,6 +8,8 @@ tags:
   - agency
   - flags
   - config
+suggests:
+  - name: DMTanks-SphericalTanks
 install:
   - find: DaMichelLtd
     install_to: GameData/DaMichel

@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: DMTanks-AeroRTG
+$kref: "#/ckan/github/zer0Kerbal/AeroRadial"
+license: CC-BY-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - resources
+depends:
+  - name: DaMichelLtd
+suggests:
+  - name: DMTanks-CargoBays
+  - name: DMTanks-Fuselage
+  - name: DMTanks-SphericalTanks
+install:
+  - find: AeroRadial
+    install_to: GameData/DaMichel
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

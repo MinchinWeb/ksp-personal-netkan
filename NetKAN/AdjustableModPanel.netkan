@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: AdjustableModPanel
+$kref: "#/ckan/github/zer0Kerbal/AdjustableModPanel"
+license: BSD-2-Clause
+$vref: "#/ckan/ksp-avc"
+tags:
+  - plugin
+  - convenience
+depends:
+  - name: ModuleManager
+install:
+  - find: AdjustableModPanel
+    install_to: GameData/Morse
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: SimpleLogistics
+$kref: "#/ckan/github/zer0Kerbal/SimpleLogistics"
+license: GPL-3.0
+$vref: "#/ckan/ksp-avc"
+tags:
+  - addon
+  - resources
+depends:
+  - name: ModuleManager
+  - name: ToolbarController
+supports:
+  - name: KerbalChangelog
+  - name: AlternateResourcePanel
+install:
+  - find: SimpleLogistics
+    install_to: GameData
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

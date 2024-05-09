@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: FuelTanksPlus
+$kref: "#/ckan/github/zer0Kerbal/FuelTanksPlus"
+license: CC-BY-NC-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - resources
+  - variants
+depends:
+  - name: FTPLtd
+install:
+  - find: FuelTanksPlus
+    install_to: GameData/FuelTanksPlus
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

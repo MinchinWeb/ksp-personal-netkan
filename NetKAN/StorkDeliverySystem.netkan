@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: StorkDeliverySystem
+$kref: "#/ckan/github/zer0Kerbal/StorkDeliverySystem"
+license: CC-BY-NC-SA
+$vref: "#/ckan/ksp-avc"
+depends:
+  - name: ModuleManager
+install:
+  - find: StorkDeliverySystem
+    install_to: GameData/KermangeddonIndustries
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

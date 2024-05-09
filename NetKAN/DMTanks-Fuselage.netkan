@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: DMTanks-Fuselage
+$kref: "#/ckan/github/zer0Kerbal/Fuselage"
+license: CC-BY-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - resources
+depends:
+  - name: DaMichelLtd
+suggests:
+  - name: DMTanks-CargoBays
+  - name: DMTanks-AeroRTG
+  - name: DMTanks-SphericalTanks
+supports:
+  - name: RealFuels
+  - name: AdvancedJetEngine
+  - name: ActiveTextureManagement
+install:
+  - find: Fuselage
+    install_to: GameData/DaMichel
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

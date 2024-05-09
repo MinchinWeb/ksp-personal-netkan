@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: RustyStarShipyards
+$kref: "#/ckan/github/zer0Kerbal/RustyStarShipyards"
+license: CC-BY-ND
+$vref: "#/ckan/ksp-avc"
+tags:
+  - agent
+  - flags
+  - parts
+  - config
+  - science
+resources:
+  homepage: http://forum.kerbalspaceprogram.com/index.php?/topic/209405-*/
+suggests:
+  - name: PiratesoftheKeribbean
+  - name: RustyPanels
+  - name: RustyTexturesforProceduralParts
+  - name: ZPEPropulsionSystem
+install:
+  - find: 
+    install_to: GameData/RustyStar
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

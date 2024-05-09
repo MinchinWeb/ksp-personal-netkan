@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: DMTanks-SphericalTanks
+$kref: "#/ckan/github/zer0Kerbal/SphericalTanks"
+license: CC-BY-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - resources
+depends:
+  - name: DaMichelLtd
+install:
+  - find: SphericalTanks
+    install_to: GameData/DaMichel
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

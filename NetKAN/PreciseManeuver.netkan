@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: PreciseManeuver
+$kref: "#/ckan/github/zer0Kerbal/PreciseManeuver"
+license: BSD-2-Clause
+$vref: "#/ckan/ksp-avc"
+tags:
+  - plugin
+  - control
+  - convenience
+conflicts:
+  - name: PreciseNode
+install:
+  - find: PreciseManeuver
+    install_to: GameData/Morse
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

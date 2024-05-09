@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: OblivionAerospace
+$kref: "#/ckan/github/zer0Kerbal/OblivionAerospace"
+license: CC-BY-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+suggests:
+  - name: DeadlyReentry
+supports:
+  - name: FerramAerospaceResearchContinued
+  - name: TweakScale
+install:
+  - find: OblivionAerospace
+    install_to: GameData
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

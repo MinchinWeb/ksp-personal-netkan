@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: LithobrakeExplorationTechnologies
+$kref: "#/ckan/github/zer0Kerbal/LithobrakeExplorationTechnologies"
+license: CC-BY-NC-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - config
+depends:
+  - name: ModuleManager
+  - name: KlockheedMartianLtd
+install:
+  - find: LithobrakeExplorationTechnologies
+    install_to: GameData/NecroBones
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan
