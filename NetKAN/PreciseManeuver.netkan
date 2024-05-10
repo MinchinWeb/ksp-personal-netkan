@@ -1,7 +1,7 @@
 spec_version: v1.18
 identifier: PreciseManeuver
 $kref: "#/ckan/github/zer0Kerbal/PreciseManeuver"
-license: BSD-2-Clause
+license: BSD-2-clause
 $vref: "#/ckan/ksp-avc"
 tags:
   - plugin

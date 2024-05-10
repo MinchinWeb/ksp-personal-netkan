@@ -11,3 +11,4 @@ install:
     install_to: GameData/nli2work
 x_netkan_github:
   use_source_archive: true
+_hold_reason: bad KSP version (and last compatible with v0.90)

@@ -17,7 +17,7 @@ suggests:
   - name: RustyTexturesforProceduralParts
   - name: ZPEPropulsionSystem
 install:
-  - find: 
+  - find: RustyStarShipyards
     install_to: GameData/RustyStar
 x_netkan_github:
   use_source_archive: true

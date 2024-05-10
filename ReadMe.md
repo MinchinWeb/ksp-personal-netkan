@@ -39,3 +39,7 @@ repo.
 ### GitHub Access Token
 
 from here --> <https://github.com/settings/tokens>
+
+### Valid Licenses
+
+<https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/#license-specification>

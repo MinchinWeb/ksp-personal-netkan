@@ -23,9 +23,12 @@ CKAN_DIR = CKAN_DIR.resolve()
     help={
         "github_token": "GitHub API token. Also looks for '.gh-token.txt' file in root directory.",
         "continue_from": "Only generate for projects named after this.",
+        "releases": "Number of releases to inflate. Number or 'all'. Default is 1.",
+        "debug": "'debug' messages, vs 'verbose'",
+        "one": "single mod to inflate"
     }
 )
-def make_ckan(ctx, github_token=None, continue_from=None):
+def make_ckan(ctx, github_token=None, continue_from=None, releases=None, debug=False, one=None):
     """Turn netkan files into (useable) ckan files!"""
     print("**starting**")
     # print(HERE)
@@ -41,7 +44,7 @@ def make_ckan(ctx, github_token=None, continue_from=None):
         print("(missing)")
 
     if github_token:
-        GITHUB_TOKEN_STR = f" --github-token {github_token}"
+        pass
     else:
         try:
             with open(HERE / ".gh-token.txt", "r") as fn:
@@ -50,15 +53,35 @@ def make_ckan(ctx, github_token=None, continue_from=None):
                     f"GITHUB_TOKEN_STR={GITHUB_TOKEN_STR[:3]}[...]{GITHUB_TOKEN_STR[-3:]}"
                 )
         except FileNotFoundError:
-            GITHUB_TOKEN_STR = ""
             print("No GitHub API token")
+
+    if github_token:
+        GITHUB_TOKEN_STR = f" --github-token {github_token}"
+    else:
+        GITHUB_TOKEN_STR = ""
+
+    if releases:
+        RELEASES_STR = f" --releases {releases}"
+    else:
+        RELEASES_STR = ""
+
+    if debug:
+        VERBOSE_STR = " --debug"
+    else:
+        VERBOSE_STR = " --verbose"
 
     for dirpath, dirnames, filenames in os.walk(NETKAN_DIR):
         # print(dirpath, dirnames, filenames)
         for fn in filenames:
             fn = Path(fn)
 
-            if continue_from and fn.stem < continue_from:
+            if one:
+                if fn.stem.lower().startswith(one.lower()):
+                    pass
+                else:
+                    print(f"    {fn!s} -- skipping!")
+                    continue
+            elif continue_from and fn.stem.lower() < continue_from.lower():
                 print(f"    {fn!s} -- skipping!")
                 continue
 
@@ -67,9 +90,14 @@ def make_ckan(ctx, github_token=None, continue_from=None):
             output_dir = CKAN_DIR / fn.stem
             output_dir.mkdir(exist_ok=True)
 
-            ctx.run(
-                f"{NETKAN_EXE} --outputdir {output_dir} --verbose{GITHUB_TOKEN_STR} {NETKAN_DIR / fn}"
+            RUN_STR = (
+                f"{NETKAN_EXE} --outputdir {output_dir}"
+                f"{VERBOSE_STR}{GITHUB_TOKEN_STR}{RELEASES_STR} "
+                f"{NETKAN_DIR / fn}"
             )
+            # print(f"{RUN_STR=}")
+
+            ctx.run(RUN_STR)
     print()
     print("**end**")
     print()
@@ -93,6 +121,7 @@ def apply_patches(ctx):
     print()
     print("Make sure to remove the applied patches!")
 
+
 def input_list(intro="", msg=""):
     """Use input to get multiple items, and return the list."""
     if intro:
@@ -105,6 +134,7 @@ def input_list(intro="", msg=""):
             return my_list
         else:
             my_list.append(my_item)
+
 
 @task
 def from_github(ctx, repo=None):
@@ -128,10 +158,18 @@ def from_github(ctx, repo=None):
     my_license = input("License? ")
 
     tags = input_list("Tags (enter blank item to end)", " ? ")
-    depends = input_list("depends (on what other packages) (enter blank item to end)", " ? ")
-    suggests = input_list("suggests (what other packages) (enter blank item to end)", " ? ")
-    supports = input_list("supports (what other packages) (enter blank item to end)", " ? ")
-    conflicts = input_list("conflicts (with what other packages) (enter blank item to end)", " ? ")
+    depends = input_list(
+        "depends (on what other packages) (enter blank item to end)", " ? "
+    )
+    suggests = input_list(
+        "suggests (what other packages) (enter blank item to end)", " ? "
+    )
+    supports = input_list(
+        "supports (what other packages) (enter blank item to end)", " ? "
+    )
+    conflicts = input_list(
+        "conflicts (with what other packages) (enter blank item to end)", " ? "
+    )
     install_find = input(f"install folder [{repo_name}] ? ")
     if install_find == "":
         install_find = repo_name
@@ -146,15 +184,17 @@ def from_github(ctx, repo=None):
 
     my_filename = (NETKAN_DIR / identifier).with_suffix(".netkan")
     with open(my_filename, "w") as fn:
-        fn.write(inspect.cleandoc(
-            f"""
+        fn.write(
+            inspect.cleandoc(
+                f"""
             spec_version: v1.18
             identifier: {identifier}
             $kref: "#/ckan/github/{repo}"
             license: {my_license}
             $vref: "#/ckan/ksp-avc"
             """
-        ))
+            )
+        )
         fn.write("\n")
         if tags:
             fn.write("tags:\n")
@@ -176,21 +216,25 @@ def from_github(ctx, repo=None):
             fn.write("conflicts:\n")
             for conflict in conflicts:
                 fn.write(f"  - name: {conflict}\n")
-        fn.write(inspect.cleandoc(
-            f"""
+        fn.write(
+            inspect.cleandoc(
+                f"""
             install:
               - find: {install_find}
                 install_to: GameData{install_to}
             """
-        ))
+            )
+        )
         fn.write("\n")
         if source_archive:
-            fn.write(inspect.cleandoc(
-                """
+            fn.write(
+                inspect.cleandoc(
+                    """
                 x_netkan_github:
                   use_source_archive: true
                 """
-            ))
+                )
+            )
             fn.write("\n")
         fn.write("x_via: MinchinWeb's GitHub to NetKan")
         fn.write("\n")
