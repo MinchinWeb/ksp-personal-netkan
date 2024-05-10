@@ -1,0 +1,9 @@
+spec_version: 1.18
+identifier: Luciole
+$kref: "#/ckan/spacedock/2392"
+license: CC-BY-NC-ND
+tags:
+  - parts
+install:
+  - find: Luciole
+    install_to: GameData
