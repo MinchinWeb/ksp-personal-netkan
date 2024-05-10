@@ -1,0 +1,10 @@
+spec_version: 1.18
+identifier: ApolloRecreationKit
+$kref: "#/ckan/spacedock/2485"
+license: restricted
+depends:
+  - CommunityCategoryKit
+  - B9PartSwitch
+install:
+  - find: Benjee10_ARK
+    install_to: GameData
