@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: MEVHeavyIndustries
+$kref: "#/ckan/github/zer0Kerbal/MEVHeavyIndustries"
+license: CC-BY-NC-SA
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+  - config
+depends:
+  - name: ModuleManager
+supports:
+  - name: InterstellarFuelSwitch
+  - name: KSPInterstellarExtended
+  - name: TweakScale
+install:
+  - find: MEVHeavyIndustries
+    install_to: GameData
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan
