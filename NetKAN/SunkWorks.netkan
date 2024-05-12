@@ -1,0 +1,14 @@
+spec_version: v1.18
+identifier: SunkWorks
+$kref: "#/ckan/github/Angel-125/SunkWorks"
+license: restricted
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+depends:
+  - name: WildBlueCore
+  - name: ModuleManager
+install:
+  - find: SunkWorks
+    install_to: GameData/WildBlueIndustries
+x_via: MinchinWeb's GitHub to NetKan
