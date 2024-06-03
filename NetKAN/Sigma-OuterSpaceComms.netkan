@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: Sigma-OuterSpaceComms
+$kref: "#/ckan/github/Sigma88/Sigma-OuterSpaceComms"
+license: CC-BY-NC-SA-4.0
+$vref: "#/ckan/ksp-avc"
+tags:
+  - parts
+depends:
+  - name: RemoteTech
+suggests:
+  - name: OuterPlanetsMod
+install:
+  - find: Sigma/OuterSpaceComms
+    install_to: GameData
+x_via: MinchinWeb's GitHub to NetKan
