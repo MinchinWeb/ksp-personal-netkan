@@ -1,0 +1,26 @@
+spec_version: v1.18
+identifier: IO-AlteredOrbits
+$kref: "#/ckan/github/IIodyne/IO-AlteredOrbits"
+license: MIT
+$vref: "#/ckan/ksp-avc"
+tags:
+  - planets
+  - config
+depends:
+  - name: Kopernicus
+  - name: ModuleManager
+supports:
+  - name: OuterPlanetsMod
+  - name: MinorPlanetsExpansion
+  - name: JanetsPlanets
+  - name: ExtrasolarPlanetsBeyondKerbol-RealisticScale
+  - name: ExtrasolarPlanetsBeyondKerbol-stock
+  - name: GrannusExpansionPack
+  - name: Principia
+  - name: IO-PrincipiaOrbitPatches
+recommends:
+  - name: IO-PrincipiaGravityModels
+install:
+  - find: IO-AlteredOrbits/GameData/Iodyne/IO-AlteredOrbits
+    install_to: GameData/Iodyne
+x_via: MinchinWeb's GitHub to NetKan

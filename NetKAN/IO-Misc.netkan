@@ -1,0 +1,16 @@
+spec_version: v1.18
+identifier: IO-Misc
+$kref: "#/ckan/github/IIodyne/IO-Misc"
+license: MIT
+$vref: "#/ckan/ksp-avc"
+tags:
+  - planets
+  - config
+depends:
+  - name: ModuleManager
+suggests:
+  - name: Principia
+install:
+  - find: IO-Misc/GameData/Iodyne/IO-Misc
+    install_to: GameData/Iodyne
+x_via: MinchinWeb's GitHub to NetKan

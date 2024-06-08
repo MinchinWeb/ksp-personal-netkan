@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: IO-PrincipiaGravityModels
+$kref: "#/ckan/github/IIodyne/IO-PrincipiaGravityModels"
+license: MIT
+$vref: "#/ckan/ksp-avc"
+tags:
+  - planets
+  - config
+depends:
+  - name: Principia
+  - name: ModuleManager
+install:
+  - find: IO-PrincipiaGravityModels/GameData/Iodyne/IO-PrincipiaGravityModels
+    install_to: GameData/Iodyne
+x_via: MinchinWeb's GitHub to NetKan
