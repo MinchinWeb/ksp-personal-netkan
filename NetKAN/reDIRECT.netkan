@@ -1,0 +1,15 @@
+spec_version: v1.18
+identifier: reDIRECT
+$kref: "#/ckan/spacedock/1742"
+license: restricted
+depends:
+  - name: CommunityResourcePack
+  - name: B9PartSwitch
+  - name: Benjee10-SharedAssets
+  - name: ModuleManager
+supports:
+  - name: PlumeParty
+  - name: DeployableEngines
+install:
+  - find: reDIRECT
+    install_to: GameData

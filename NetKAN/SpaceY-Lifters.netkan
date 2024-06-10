@@ -1,5 +1,6 @@
 spec_version: v1.18
 identifier: SpaceY-Lifters
+epcoh: 1
 license: CC-BY-NC-SA
 $vref: '#/ckan/ksp-avc'
 tags:

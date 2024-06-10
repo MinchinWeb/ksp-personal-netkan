@@ -1,0 +1,28 @@
+spec_version: v1.18
+identifier: SimpleConstruction
+$kref: "#/ckan/github/zer0Kerbal/SimpleConstruction"
+license: GPL-3.0
+$vref: "#/ckan/ksp-avc/SimpleConstruction.version"
+tags:
+  - parts
+  - plugin
+  - config
+  - flags
+  - convenience
+  - editor
+  - resources
+  - crewed
+  - uncrewed
+depends:
+  - name: ModuleManager
+conflicts:
+  - name: ExtraPlanetaryLaunchpads
+install:
+  - find: SimpleConstruction
+    install_to: GameData
+  - find: ExtraplanetaryLaunchpads/Textures
+    install_to: GameData
+    filter: EL.version
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

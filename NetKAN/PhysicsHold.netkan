@@ -1,0 +1,13 @@
+spec_version: v1.18
+identifier: PhysicsHold
+$kref: "#/ckan/github/gotmachine/PhysicsHold"
+license: MIT
+$vref: "#/ckan/ksp-avc"
+tags:
+  - gameplay
+depends:
+  - name: Harmony2
+install:
+  - find: PhysicsHold
+    install_to: GameData
+x_via: MinchinWeb's GitHub to NetKan
