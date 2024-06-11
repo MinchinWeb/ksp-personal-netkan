@@ -1,0 +1,34 @@
+spec_version: v1.27
+identifier: SterlingSystems-Tankage
+license: CC-BY-SA
+_$kref: '#/ckan/github/JadeOfMaar/SterlingSystems/asset_match/Sterling_Tankage(.*).zip'
+$vref: '#/ckan/ksp-avc'
+author: JadeOfMaar
+resources:
+  homepage: >-
+    https://forum.kerbalspaceprogram.com/topic/219609-1125-sterling-systems-v038-apr-20-2024/
+  repository: https://github.com/JadeOfMaar/SterlingSystems/
+  x_remote-avc: https://raw.githubusercontent.com/JadeOfMaar/SterlingSystems/dev/GameData/SterlingSystems/Version/SterlingSystems.version
+ksp_version_min: 1.12.0
+tags:
+  - parts
+depends:
+  - name: ModuleManager
+  - name: SterlingSystems-Core
+supports:
+  - name: CommunityResourcePack
+  - name: FarFutureTechnologies
+  - name: IndicatorLights
+  - name: Kerbalism
+  - name: SimpleRepaint
+  - name: SystemHeat
+  - name: Waterfall
+
+name: Stirling Systems - Tankage
+abstract: |
+  A very large KSP mod. Similar scope to Far Future Tech or KSP Interstellar 
+install:
+  - find: SterlingSystems
+    install_to: GameData
+download: https://github.com/JadeOfMaar/SterlingSystems/releases/download/0.3.8/Sterling_Tankage_0.3.8.zip
+version: 0.3.8

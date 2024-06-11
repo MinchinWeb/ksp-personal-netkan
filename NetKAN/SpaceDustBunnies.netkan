@@ -1,0 +1,14 @@
+spec_version: v1.18
+identifier: SpaceDustBunnies
+$kref: "#/ckan/github/JadeOfMaar/SpaceDustBunnies"
+license: MIT
+$vref: "#/ckan/ksp-avc"
+tags:
+  - config
+  - planets
+depends:
+  - name: SpaceDust
+install:
+  - find: SpaceDustBunnies
+    install_to: GameData
+x_via: MinchinWeb's GitHub to NetKan
