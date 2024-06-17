@@ -1,0 +1,17 @@
+spec_version: v1.18
+identifier: FieldTrainingFacility
+$kref: "#/ckan/github/zer0Kerbal/FieldTrainingFacility"
+license: GPL-3.0
+$vref: "#/ckan/ksp-avc"
+depends:
+  - name: ModuleManager
+suggests:
+  - name: FieldTrainingLaboratory
+  - name: BetterScienceLabs
+  - name: KGEx
+install:
+  - find: FieldTrainingFacility
+    install_to: GameData
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

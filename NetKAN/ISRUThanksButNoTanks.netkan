@@ -1,0 +1,20 @@
+spec_version: v1.18
+identifier: ISRUThanksButNoTanks
+$kref: "#/ckan/github/zer0Kerbal/ISRUThanksButNoTanks"
+license: GPL-2.0
+$vref: "#/ckan/ksp-avc"
+tags:
+  - config
+  - parts
+  - patch
+depends:
+  - name: ModuleManager
+recommends:
+  - name: KerbalChangelog
+  - name: StockalikeMiningExtension
+install:
+  - find: ISRUThanksButNoTanks
+    install_to: GameData/QuickBASIC
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan

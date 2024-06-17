@@ -1,23 +1,13 @@
 spec_version: v1.18
 identifier: MiniSampleReturnCapsule
+$kref: "#/ckan/github/zer0Kerbal/MiniSampleReturnCapsule"
 license: BSD-2-clause
-$vref: '#/ckan/ksp-avc'
-tags:
-  - config
+$vref: "#/ckan/ksp-avc"
 depends:
   - name: ModuleManager
 install:
   - find: MiniSampleReturnCapsule
     install_to: GameData
-
-name: "Mini Sample Return Capsule (MSRC)"
-abstract: |
-  Two size zero (0.625m) parts that make up an autonomous return capsule to
-  stuff your experiments in for Kerbal Space Program.
-author: "zer0Kerbal, CobaltWolf, AlbertKermin"
-resources:
-  curse: https://www.curseforge.com/kerbal/ksp-mods/minisamplereturncapsule
-  repository: https://github.com/zer0Kerbal/MiniSampleReturnCapsule/
-  homepage: https://forum.kerbalspaceprogram.com/topic/204186-mini-sample-return-capsule-msrc-v1430-edition/
-
-download: https://mediafilez.forgecdn.net/files/4613/115/MiniSampleReturnCapsule-1.4.4.0-release-CF.zip
+x_netkan_github:
+  use_source_archive: true
+x_via: MinchinWeb's GitHub to NetKan
