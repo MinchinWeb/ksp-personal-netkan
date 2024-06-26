@@ -1,7 +1,7 @@
 spec_version: v1.27
-identifier: SterlingSystems-Engines
+identifier: SterlingSystems-WorldPower
 license: CC-BY-SA
-_$kref: '#/ckan/github/JadeOfMaar/SterlingSystems/asset_match/Sterling_Engines_(.*).zip'
+_$kref: '#/ckan/github/JadeOfMaar/SterlingSystems/asset_match/Sterling_WorldPower_(.*).zip'
 $vref: '#/ckan/ksp-avc'
 author: JadeOfMaar
 resources:
@@ -24,11 +24,11 @@ supports:
   - name: SystemHeat
   - name: Waterfall
 
-name: Stirling Systems - Engines
+name: Stirling Systems - World Power
 abstract: |
   A very large KSP mod. Similar scope to Far Future Tech or KSP Interstellar 
 install:
   - find: SterlingSystems
     install_to: GameData
-download: https://github.com/JadeOfMaar/SterlingSystems/releases/download/0.4.0/Sterling_Engines_0.4.0.zip
+download: https://github.com/JadeOfMaar/SterlingSystems/releases/download/0.4.0/Sterling_WorldPower_0.4.0.zip
 version: 0.4.0

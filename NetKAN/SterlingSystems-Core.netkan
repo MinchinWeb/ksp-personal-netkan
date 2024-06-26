@@ -1,7 +1,7 @@
 spec_version: v1.27
 identifier: SterlingSystems-Core
 license: CC-BY-SA
-_$kref: '#/ckan/github/JadeOfMaar/SterlingSystems/asset_match/Sterling_Core(.*).zip'
+_$kref: '#/ckan/github/JadeOfMaar/SterlingSystems/asset_match/Sterling_Core_(.*).zip'
 $vref: '#/ckan/ksp-avc'
 author: JadeOfMaar
 resources:
@@ -29,5 +29,5 @@ abstract: |
 install:
   - find: SterlingSystems
     install_to: GameData
-download: https://github.com/JadeOfMaar/SterlingSystems/releases/download/0.3.8/Sterling_Core_0.3.8.zip
+download: https://github.com/JadeOfMaar/SterlingSystems/releases/download/0.4.0/Sterling_Core_0.4.0.zip
 
