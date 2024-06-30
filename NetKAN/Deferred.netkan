@@ -1,0 +1,24 @@
+spec_version: v1.18
+identifier: Deferred
+$kref: "#/ckan/github/LGhassen/Deferred"
+license: GPL-3.0
+$vref: "#/ckan/ksp-avc"
+depends:
+  - name: Harmony2
+  - name: Shabby
+supports:
+  - name: Parallax
+  - name: Scatterer
+  - name: EnvironmentalVisualEnhancements
+  - name: TUFX
+  - name: Waterfall
+  - name: FreeIva
+  - name: KerbalVR
+  - name: SimpleAdjustableFairings
+  - name: KerbalKonstructs
+  - name: RasterPropMonitor
+  - name: EngineLightRelit
+install:
+  - find: zzz_Deferred
+    install_to: GameData
+x_via: MinchinWeb's GitHub to NetKan
