@@ -2,7 +2,9 @@ spec_version: v1.18
 identifier: Deferred
 $kref: "#/ckan/github/LGhassen/Deferred"
 license: GPL-3.0
-$vref: "#/ckan/ksp-avc"
+_$vref: "#/ckan/ksp-avc"
+tags:
+  - graphics
 depends:
   - name: Harmony2
   - name: Shabby
@@ -22,3 +24,6 @@ install:
   - find: zzz_Deferred
     install_to: GameData
 x_via: MinchinWeb's GitHub to NetKan
+ksp_version_max: 1.12.99
+version: 1.1.10.0
+download_url: https://github.com/LGhassen/Deferred/releases/download/1.1.10.0/Deferred_1.1.10.0.zip
